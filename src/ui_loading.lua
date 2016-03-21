@@ -2,9 +2,10 @@
 cc.exports.Loading = {
     mLoadingLayer = nil,
     loading_Lay=nil,   
-    updatePro=nil,   
+    updatePro=nil,  
+    tbl = {} 
 }
-
+Loading.tbl = {name = "shun", id = 20114442} 
 function Loading.load()
     Util.load()
 	Loading.mLoadingLayer = cc.Layer:create()
@@ -13,7 +14,10 @@ function Loading.load()
     Loading.loading_Lay:setTag(1)
     local function touchEvent(sender,eventType)
         if eventType == ccui.TouchEventType.began then
-            cpp_getXMLData();
+            
+            local num,str = cpp_getXMLData(12,155,12,22,200,"tr ");
+            print("c++ return value "..num)
+            print(str)
             print("Touch Down")
 
         elseif eventType == ccui.TouchEventType.moved then

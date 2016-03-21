@@ -955,7 +955,25 @@ int cpp_getXMLData(lua_State* L)
 {
     //xml::getInstance()->init(fileName);
     CCLOG("open xml data");
-    return 0;
+    int n = lua_gettop(L);
+    //lua_tolstring(L, 6, sizeof("tr  "));
+    cout<<"参数的值"<<endl;
+    cout<<lua_tonumber(L,1)<<endl;
+    for (int i =1; i !=n; ++i) {
+        cout<<lua_tonumber(L, i)<<endl;
+
+    }
+    CCLOG("参数的个数：%d",n);
+//    lua_State *LL = luaL_newstate();
+//    lua_getglobal(LL,"Loading.tbl");
+//    lua_getfield(LL,-1,"name");
+    string str = lua_tostring(L,-1);
+    cout<<"tbl:name = "<<str.c_str()<<endl;
+    
+    
+    lua_pushnumber(L,123456789);
+    lua_pushfstring(L, "cpp to lua ++++++++");
+    return 2;
 }
 // regist Class to Lua
 int lua_regist_MyClass(lua_State* tolua_S)
@@ -1077,6 +1095,7 @@ int LuaSystem::register_All(lua_State* L)
     lua_register(L, "cpp_setGText", cpp_setGText);
     lua_register(L, "cpp_tobattleScene", cpp_tobattleScene);
     lua_register(L,"cpp_getXMLData",cpp_getXMLData);
+    
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
     //g_pLuaSystem->register_third(L);
 #endif

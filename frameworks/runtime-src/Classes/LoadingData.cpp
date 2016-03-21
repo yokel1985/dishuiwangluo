@@ -8,6 +8,7 @@
 
 #include "LoadingData.h"
 #include <string>
+#include "ui/CocosGUI.h"
 using namespace std;
 const string loadingPNG[] = {};
  int INDEX = 0;
@@ -20,6 +21,9 @@ LoadingData* LoadingData::getInstance()
 void LoadingData::load()
 {
     
+    
+   
+
 }
 
 void LoadingData::show()

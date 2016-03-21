@@ -10,13 +10,13 @@
 #define MainGameScene_hpp
 
 #include <stdio.h>
-#include "GameManager"
 #include "cocos2d.h"
 using namespace cocos2d;
 
 class MainGameScene :public Scene
 {
-    virtual bool init() override;
+public:
+     bool init();
     CREATE_FUNC(MainGameScene);
     
 };

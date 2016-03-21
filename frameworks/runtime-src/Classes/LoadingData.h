@@ -22,6 +22,7 @@ public:
     void load();
     void show();
     void hide(Layer * layer);
+    Layer * _layer;
 private:
     void loadPNG(float dt);
     
