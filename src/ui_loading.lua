@@ -9,7 +9,7 @@ Loading.tbl = {name = "shun", id = 20114442}
 function Loading.load()
     Util.load()
 	Loading.mLoadingLayer = cc.Layer:create()
-	Loading.loading_Lay = cc.CSLoader:createNode("UI/allcsd/LoadingLayer.csb")
+	Loading.loading_Lay = cc.CSLoader:createNode("UI/allcsd/MainLayer.csb")
     --Loading.mLoadingLayer:retain()  
     Loading.loading_Lay:setTag(1)
     local function touchEvent(sender,eventType)
