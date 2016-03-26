@@ -18,7 +18,7 @@ function HeroList.show()
 	local function toBattleCallBack(ref,touchType)
 		local butName=ref:getName()
         if touchType==ccui.TouchEventType.began then
-	        Util.touchButton()
+	       
         	
         elseif touchType == ccui.TouchEventType.ended then 
         	if  "Button_14" == butName then 
@@ -31,5 +31,5 @@ function HeroList.show()
 
         end
 	end
-	
+	Util.hide(HeroList.mHeroListLayer)
 end

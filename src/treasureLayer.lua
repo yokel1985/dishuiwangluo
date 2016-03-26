@@ -17,8 +17,10 @@ end
 function TreasureLayer.show()
 	Util.addCurrentScene(TreasureLayer.mTreasureLayer)
     Util.layerToOther(TreasureLayer.mTreasureLayer)
-    local action = cc.ScaleTo:create(0.5,1)
+    
+    local action = cc.ScaleTo:create(0.5,1.2)
     TreasureLayer.TreasureLayer_layer:runAction(action)
+
 	local function toBattleCallBack(ref,touchType)
 		local butName=ref:getName()
         if touchType==ccui.TouchEventType.began then       	

@@ -40,7 +40,8 @@ function MainCity.show()
 	        	ZiYaHall.load()
 	        	ZiYaHall.show()	        	
 	        elseif "Button_3_1" == butName then
-	        	
+	        	HeroList.load()
+	        	HeroList.show()
 	        end
 	        
         elseif touchType == ccui.TouchEventType.canceled then
