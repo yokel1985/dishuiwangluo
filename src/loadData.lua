@@ -2,6 +2,8 @@ cc.exports.LoadData = {
 }
 
 function cc.exports.LoadData.load()
-    Loading.load()
-    Loading.show()
+    MainCity.load()
+    MainCity.show()
+    -- StoreLayer.load()
+    -- StoreLayer.show()
 end

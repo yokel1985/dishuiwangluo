@@ -1,8 +1,7 @@
 cc.exports.RequrieFile = {
 
 }
--- 多层切换管理类
---cc.LayerMultiplex:create():switchTo(n)
+
 
 function cc.exports.RequrieFile.load()
     
@@ -11,6 +10,11 @@ function cc.exports.RequrieFile.load()
     require "ui_util"
     require "constants"
     require "cppToLua"
+    require "ziYaHall"
+    require "ui_mainCityLayer"
+    require "storeLayer"
+    require "heroList"
+    require "treasureLayer"
 
 
 end

@@ -15,16 +15,22 @@ function Loading.load()
     local function touchEvent(sender,eventType)
         if eventType == ccui.TouchEventType.began then
             
-            local num,str = cpp_getXMLData(12,155,12,22,200,"tr ");
-            print("c++ return value "..num)
-            print(str)
-            print("Touch Down")
+            -- local num,str = cpp_getXMLData(12,155,12,22,200,"tr ");
+            -- print("c++ return value "..num)
+            -- print(str)
+            -- print("Touch Down")
 
         elseif eventType == ccui.TouchEventType.moved then
             print("Touch Move")
+            
         elseif eventType == ccui.TouchEventType.ended then
             print("Touch Up")
-            cpp_tobattleScene()
+            -- cpp_tobattleScene()
+            if "Button_3_0" == butName then
+                ziYaHall.load()
+                Loading.mLoadingLayer:addChild(ZiYaHall.ziYaHall_layer,10)
+
+            end
             
         elseif eventType == ccui.TouchEventType.canceled then
             print("Touch Cancelled")
@@ -37,7 +43,12 @@ function Loading.load()
         goToBattleBut:setPosition(cc.p(Constants.WIDTH / 2.0, Constants.HEIGHT / 3.0))
         goToBattleBut:addTouchEventListener(touchEvent)
 
-    Loading.mLoadingLayer:addChild(goToBattleBut,2)
+        local ziYaHall = Loading.loading_Lay:getChildByName("Button_3_0")
+
+            ziYaHall:addTouchEventListener(touchEvent)
+    
+
+    --Loading.mLoadingLayer:addChild(goToBattleBut,2)
     Loading.mLoadingLayer:addChild(Loading.loading_Lay)
     return Loading.mLoadingLayer
 

@@ -84,3 +84,28 @@ function Util.layerToOther(layerName)
 		return 
 	end
 end
+function Util.hide(layerName)
+	local layerName = layerName
+	local function removeSelf()
+		if layerName:getParent() then
+			layerName:removeFromParent()
+		end
+	end
+
+	local function toMainCallBack(ref,touchType)
+		local butName=ref:getName()
+        if touchType==ccui.TouchEventType.began then
+        	
+        elseif touchType == ccui.TouchEventType.ended then 
+        	--if  "Button_1" == butName then 
+	    		removeSelf()	    		
+           --end
+           -- effect
+        elseif touchType == ccui.TouchEventType.canceled then
+
+        end
+	end
+	local closeBtn = layerName:getChildByTag(1):getChildByName("Button_1")
+	closeBtn:addTouchEventListener(toMainCallBack)
+	
+end
