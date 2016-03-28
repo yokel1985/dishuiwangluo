@@ -13,7 +13,7 @@ function HeroList.load()
 end
 function HeroList.show()
 	Util.addCurrentScene(HeroList.mHeroListLayer)
-    Util.layerToOther(HeroList.mHeroListLayer )
+    Util.layerToOther(HeroList.mHeroListLayer)
 
 	local function toBattleCallBack(ref,touchType)
 		local butName=ref:getName()

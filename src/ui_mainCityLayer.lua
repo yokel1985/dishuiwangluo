@@ -42,6 +42,9 @@ function MainCity.show()
 	        elseif "Button_3_1" == butName then
 	        	HeroList.load()
 	        	HeroList.show()
+        	elseif "Button_3_2" == butName then
+	        	HeroSelect.load()
+	        	HeroSelect.show()
 	        end
 	        
         elseif touchType == ccui.TouchEventType.canceled then
@@ -54,6 +57,8 @@ function MainCity.show()
 		ziYaHall:addTouchEventListener(touchMainBut)
 	local heroBtn = MainCity.main_lay:getChildByName("Button_3_1")
 		heroBtn:addTouchEventListener(touchMainBut)
+	local battleBtn = MainCity.main_lay:getChildByName("Button_3_2")
+		battleBtn:addTouchEventListener(touchMainBut)
 		
 end
 

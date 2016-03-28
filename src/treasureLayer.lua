@@ -16,7 +16,7 @@ function TreasureLayer.load()
 end
 function TreasureLayer.show()
 	Util.addCurrentScene(TreasureLayer.mTreasureLayer)
-    Util.layerToOther(TreasureLayer.mTreasureLayer)
+    Util.layerToOther(TreasureLayer.TreasureLayer_layer)
     
     local action = cc.ScaleTo:create(0.5,1.2)
     TreasureLayer.TreasureLayer_layer:runAction(action)

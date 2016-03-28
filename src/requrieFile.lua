@@ -15,6 +15,8 @@ function cc.exports.RequrieFile.load()
     require "storeLayer"
     require "heroList"
     require "treasureLayer"
+    require "heroSelect"
+
 
 
 end
